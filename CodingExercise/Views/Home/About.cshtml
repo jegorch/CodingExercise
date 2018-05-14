@@ -1,0 +1,25 @@
+﻿@using System.Reflection
+@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+<hr />
+<p>
+    <dl class="row">
+        <dt class="col-sm-2">Application Version:</dt>
+        <dd class="col-sm-9">@Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationVersion</dd>
+        <dt class="col-sm-2">Product Version:</dt>
+        <dd class="col-sm-9">@ViewData["Version"]</dd>
+        <dt class="col-sm-2">File Version:</dt>
+        <dd class="col-sm-9">@ViewData["FileVersion"]</dd>
+        <dt class="col-sm-2">Company:</dt>
+        <dd class="col-sm-9">@ViewData["Company"]</dd>
+        <dt class="col-sm-2">Configuration:</dt>
+        <dd class="col-sm-9">@ViewData["Configuration"]</dd>
+        <dt class="col-sm-2">Server:</dt>
+        <dd class="col-sm-9">@ViewData["Server"]</dd>
+        <dt class="col-sm-2">Database:</dt>
+        <dd class="col-sm-9">@ViewData["Database"]</dd>
+    </dl>
+</p>
