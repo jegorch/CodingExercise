@@ -264,7 +264,7 @@ namespace CodingExercise.Tests
             }
             _output.WriteLine($"\tres: [{res}]");
 
-            Assert.True(res.ProductIncluded.Select(p => p.Product).Contains(card));
+            Assert.Contains(card, res.ProductIncluded.Select(p => p.Product));
             //Assert.Equal("Stud not hits; Income not hits", msg);
         }
 
@@ -314,7 +314,7 @@ namespace CodingExercise.Tests
             }
             //_output.WriteLine($"\tres: [{res}]");
 
-            Assert.False(res.ProductIncluded.Select(p => p.Product).Contains(card));
+            Assert.DoesNotContain(card, res.ProductIncluded.Select(p => p.Product));
         }
 
         [Fact]
@@ -455,7 +455,7 @@ namespace CodingExercise.Tests
                 _output.WriteLine($"\tIncluded Product: {productBundle.Product.ProductName}");
             }
 
-            Assert.True(res.ProductIncluded.Select(p => p.Product).Contains(card));
+            Assert.Contains(card, res.ProductIncluded.Select(p => p.Product));
         }
 
         [Fact]

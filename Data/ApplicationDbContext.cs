@@ -11,15 +11,16 @@ namespace CodingExercise.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseLoggerFactory(MyLoggerFactory);
+            //optionsBuilder.UseLoggerFactory(MyLoggerFactory);
         }
 
-        public static readonly LoggerFactory MyLoggerFactory = new LoggerFactory(new[]
-        {
-                new ConsoleLoggerProvider((category, level)
-                                                  => category == DbLoggerCategory.Database.Command.Name
-                                                     && level == LogLevel.Error, true)
-        });
+        //public static readonly LoggerFactory MyLoggerFactory = new LoggerFactory(new[]
+        //{
+
+        //        new ConsoleLoggerProvider((category, level)
+        //                                          => category == DbLoggerCategory.Database.Command.Name
+        //                                             && level == LogLevel.Error, true)
+        //});
 
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Survey> Surveys { get; set; }
